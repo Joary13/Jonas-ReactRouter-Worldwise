@@ -2,10 +2,12 @@ import styles from './CountryList.module.css';
 import Message from './Message';
 import Spinner from './Spinner';
 import CountryItem from './CountryItem';
+import { useCities } from '../contexts/CitiesContext';
 
 /* eslint-disable */
 
-function CountryList({ cities, isLoading }) {
+function CountryList() {
+  const { cities, isLoading } = useCities();
   if (isLoading) return <Spinner />;
   if (!cities.length)
     return <Message message='aucune ville donc pays visité pour le moment' />;

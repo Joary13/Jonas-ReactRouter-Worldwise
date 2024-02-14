@@ -24,6 +24,7 @@ const FAKE_USER = {
   avatar: 'https://i.pravatar.cc/100?u=zz',
 };
 
+/*eslint-disable*/
 function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
     reducer,
@@ -38,6 +39,7 @@ function AuthProvider({ children }) {
   function logout() {
     dispatch({ type: 'logout' });
   }
+
   return (
     <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
       {children}

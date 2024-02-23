@@ -2,7 +2,7 @@ import styles from './CountryList.module.css';
 import Message from './Message';
 import Spinner from './Spinner';
 import CountryItem from './CountryItem';
-import { useCities } from '../contexts/CitiesContext';
+import useCities from '../contexts/useCities';
 
 /* eslint-disable */
 
